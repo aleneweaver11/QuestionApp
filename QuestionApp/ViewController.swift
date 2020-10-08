@@ -10,7 +10,8 @@ import UIKit
 
 class ViewController: UIViewController
 {
-
+    @IBOutlet weak var answerLabel: UILabel!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -19,6 +20,15 @@ class ViewController: UIViewController
         view.backgroundColor = UIColor.yellow
     }
 
-
+    @IBAction func trueButton(_ sender: UIButton)
+    {
+        answerLabel.text = "Incorrect"
+    }
+    
+    @IBAction func falseButton(_ sender: UIButton)
+    {
+        answerLabel.text = "Correct, Snow White and the Seven Dwarfs was released first in December 1937"
+        
+    }
 }
 
